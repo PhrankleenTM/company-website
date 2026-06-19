@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us: Rotic Aluminium Extrusion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">
+        <img src="./images/IMG_4225.png" alt="" class="logo" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span class="nav-toggle-bars"
+          ><span></span><span></span><span></span
+        ></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html" data-link>Home</a></li>
+        <li><a href="about.html" data-link>About Us</a></li>
+        <li><a href="careers.html" data-link>Careers</a></li>
+        <li><a href="contact.html" data-link class="active">Contact Us</a></li>
+      </ul>
+      <div class="mobile-menu-foot mono">Awka, Anambra State, Nigeria</div>
+    </div>
+
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="page-header" style="min-height: 40vh">
+      <div class="wrap">
+        <div class="eyebrow">Get In Touch</div>
+        <h1>CONTACT US</h1>
+        <p>
+          Contact us about anything related to our company or services. We'll do
+          our best to get back to you as soon as possible.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section-pad">
+      <div class="wrap contact-wrap">
+        <div class="contact-info reveal">
+          <div class="contact-detail">
+            <div class="k">Location</div>
+            <div class="v">Awka, Anambra State, Nigeria</div>
+          </div>
+          <div class="contact-detail">
+            <div class="k">Careers</div>
+            <div class="v">jobs@roticaluminium.com</div>
+          </div>
+          <div class="contact-detail">
+            <div class="k">Hours</div>
+            <div class="v">Monday to Saturday, 7:00 to 19:00</div>
+          </div>
+        </div>
+
+        <form class="reveal" onsubmit="return false;">
+          <div class="form-grid">
+            <div class="field">
+              <label>Name <span class="req">*</span></label>
+              <input type="text" placeholder="Your full name" required />
+            </div>
+            <div class="field">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="Optional" />
+            </div>
+            <div class="field">
+              <label>Email <span class="req">*</span></label>
+              <input type="email" placeholder="you@company.com" required />
+            </div>
+            <div class="field">
+              <label>Company</label>
+              <input type="text" placeholder="Optional" />
+            </div>
+            <div class="field full">
+              <label>Subject <span class="req">*</span></label>
+              <input type="text" placeholder="What is this about" required />
+            </div>
+            <div class="field full">
+              <label>Question <span class="req">*</span></label>
+              <textarea placeholder="Tell us more" required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="footer-row">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="contact.html">Get In Touch</a></li>
+          </ul>
+        </div>
+        <div class="footer-row" style="margin-top: 24px">
+          <span class="mono">Copyright Rotic Aluminium Extrusion</span>
+          <span class="mono">Awka, Anambra State, Nigeria</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
