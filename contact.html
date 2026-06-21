@@ -81,30 +81,53 @@
           <div class="form-grid">
             <div class="field">
               <label>Name <span class="req">*</span></label>
-              <input type="text" placeholder="Your full name" required />
+              <input
+                type="text"
+                placeholder="Your full name"
+                id="full-name"
+                required
+              />
             </div>
             <div class="field">
               <label>Phone Number</label>
-              <input type="tel" placeholder="Optional" />
+              <input type="tel" placeholder="Optional" id="number" />
             </div>
             <div class="field">
               <label>Email <span class="req">*</span></label>
-              <input type="email" placeholder="you@company.com" required />
+              <input
+                type="email"
+                placeholder="you@company.com"
+                id="email-input"
+                required
+              />
             </div>
             <div class="field">
               <label>Company</label>
-              <input type="text" placeholder="Optional" />
+              <input type="text" placeholder="Optional" id="company-input" />
             </div>
             <div class="field full">
               <label>Subject <span class="req">*</span></label>
-              <input type="text" placeholder="What is this about" required />
+              <input
+                type="text"
+                placeholder="What is this about"
+                id="about-input"
+                required
+              />
             </div>
             <div class="field full">
               <label>Question <span class="req">*</span></label>
-              <textarea placeholder="Tell us more" required></textarea>
+              <textarea
+                placeholder="Tell us more"
+                id="tell-more"
+                required
+              ></textarea>
             </div>
           </div>
-          <button type="submit" class="submit-btn">Submit</button>
+          <a href="#"
+            ><button type="submit" class="submit-btn" id="submit-btn">
+              Submit
+            </button></a
+          >
         </form>
       </div>
     </section>

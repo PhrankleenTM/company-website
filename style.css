@@ -261,13 +261,6 @@ nav a.active {
   position: relative;
   padding-top: 140px;
   padding-bottom: 80px;
-  background:
-    radial-gradient(
-      ellipse 900px 500px at 80% 0%,
-      rgba(47, 111, 237, 0.16),
-      transparent 60%
-    ),
-    var(--graphite);
 }
 .page-header .eyebrow {
   margin-bottom: 24px;
@@ -307,7 +300,7 @@ nav a.active {
   background-image: url("./images/aluminium\ bg.jpg");
   background-size: cover;
   background-position: center;
-  filter: blur(8px) opacity(0.6) brightness(0.7);
+  filter: blur(2px) opacity(0.9) brightness(0.7);
   transform: scale(1.08);
 }
 .hero-eyebrow {
@@ -381,7 +374,7 @@ nav a.active {
   font-family: "JetBrains Mono", monospace;
   font-size: 11px;
   letter-spacing: 0.08em;
-  color: var(--raw);
+  color: var(--silver);
   text-transform: uppercase;
 }
 
@@ -423,6 +416,20 @@ section {
   grid-template-columns: 0.9fr 1.1fr;
   gap: 80px;
   align-items: start;
+}
+.story::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("./images/story\ main.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) opacity(0.9) brightness(0.4);
+  transform: scale(1.08);
 }
 .story h2 {
   font-size: clamp(36px, 4.2vw, 56px);
@@ -469,6 +476,10 @@ section {
   border-bottom: 1px solid var(--line);
 }
 .mv-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 64px 56px;
   border-right: 1px solid var(--line);
 }
@@ -483,6 +494,20 @@ section {
   margin-bottom: 24px;
   display: block;
 }
+
+.mv-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+}
+
+.mv-image img {
+  height: 20rem;
+  width: 25rem;
+}
+
 .mv-card h3 {
   font-size: clamp(26px, 3vw, 34px);
   color: var(--paper);
@@ -552,9 +577,18 @@ section {
   background: var(--line);
 }
 .value-card {
+  display: flex;
+  flex-direction: column;
   background: var(--graphite);
   padding: 44px 36px;
   transition: background 0.35s ease;
+}
+.value-card img {
+  height: 70px;
+  width: 70px;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  margin-top: -2rem;
 }
 .value-card:hover {
   background: var(--graphite-soft);
@@ -636,25 +670,32 @@ section {
   padding: 100px 64px 100px 0;
 }
 .facility-visual {
+  margin-top: 2rem;
   position: relative;
-  background:
-    repeating-linear-gradient(
-      115deg,
-      rgba(245, 247, 251, 0.05) 0px,
-      rgba(245, 247, 251, 0.05) 1px,
-      transparent 1px,
-      transparent 26px
-    ),
-    linear-gradient(160deg, #1a2236, #060810 70%);
   min-height: 420px;
   display: flex;
   align-items: flex-end;
   padding: 40px;
+  cursor: pointer;
+}
+.facility-visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("./images/IMG_4254.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(0px) opacity(1) brightness(0.9);
+  transform: scale(1.08);
 }
 .facility-visual .coord {
   font-family: "JetBrains Mono", monospace;
   font-size: 12px;
-  color: var(--ember);
+  color: white;
   letter-spacing: 0.08em;
 }
 .facility-info h2 {
@@ -968,11 +1009,7 @@ details[open] .role-toggle::after {
   padding: 140px 0;
   text-align: center;
   background:
-    radial-gradient(
-      ellipse 700px 400px at 50% 100%,
-      rgba(47, 111, 237, 0.15),
-      transparent 65%
-    ),
+    radial-gradient(ellipse 700px 400px at 50% 100%, transparent 65%),
     var(--graphite);
 }
 .cta .eyebrow {
@@ -1003,6 +1040,7 @@ details[open] .role-toggle::after {
   border: 1px solid var(--paper);
   display: inline-block;
   transition: all 0.3s ease;
+  border-radius: 8px;
 }
 .btn-solid {
   background: var(--ember);
@@ -1129,5 +1167,13 @@ footer {
   }
   .wrap {
     padding: 0 22px;
+  }
+
+  .mv-image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 }
